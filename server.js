@@ -20,7 +20,10 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 var users = require('./app/routes/users')(app, express);
+var tasks = require('./app/routes/tasks')(app, express);
+
 app.use('/users', users);
+app.use('/tasks', tasks);
 
 app.get('*', function(req, res) {
     res.sendFile(__dirname + '/public/views/index.html');

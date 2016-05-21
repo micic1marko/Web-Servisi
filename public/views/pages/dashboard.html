@@ -1,1 +1,9 @@
 <h1>DASHBOARD</h1>
+
+<div ng-if="task.tasks.length == 0">
+    No tasks
+</div>
+
+<div ng-if="task.tasks.length > 0"  ng-repeat="t in task.tasks">
+    {{ t.title }}
+</div>

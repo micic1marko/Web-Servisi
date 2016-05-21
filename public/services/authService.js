@@ -11,7 +11,7 @@ angular.module('authService', [])
                 password: password
             })
                 .success(function(data) {
-                    AuthToken(data.token);
+                    AuthToken.setToken(data.token);
                     return data;
                 })
         };
@@ -75,7 +75,7 @@ angular.module('authService', [])
 
         interceptorFactory.responseError = function(response) {
             if(response.status == 403)
-                $location.path('/login');
+                $location.path('/');
 
             return $q.reject(response);
         };

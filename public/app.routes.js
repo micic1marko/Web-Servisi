@@ -7,7 +7,9 @@ angular.module('appRoutes', ['ngRoute'])
                 templateUrl: 'views/pages/login.html'
             })
             .when('/dashboard', {
-                templateUrl: 'views/pages/dashboard.html'
+                templateUrl: 'views/pages/dashboard.html',
+                controller: 'TaskController',
+                controllerAs: 'task'
             })
             .when('/signup', {
                 templateUrl: 'views/pages/signup.html'
