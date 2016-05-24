@@ -1,3 +1,10 @@
+<div ng-controller="AuthController as login">
+    <form method="post" ng-submit="login.doLogout()">
+        <button type="submit" class="btn btn-success">Logout</button>
+    </form>
+
+</div>
+
 <h1>DASHBOARD</h1>
 
 <div ng-if="task.tasks.length == 0">
