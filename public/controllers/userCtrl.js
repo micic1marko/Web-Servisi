@@ -12,7 +12,7 @@ angular.module('userCtrl', ['userService'])
 .controller('UserCreateController', function (User, $location, $window) {
         var vm = this;
 
-        vm.sighupUser = function() {
+        vm.signupUser = function() {
             vm.message = '';
 
             User.create(vm.userData)
